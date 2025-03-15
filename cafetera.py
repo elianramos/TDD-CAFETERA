@@ -1,24 +1,7 @@
-# cafetera.py
-
-class Vaso:
-    def __init__(self, capacidad, cantidad):
-        self.capacidad = capacidad
-        self.cantidad = cantidad
-
-class Azucarero:
-    def __init__(self, cantidad):
-        self.cantidad = cantidad
-
-    def usar_azucar(self, cantidad):
-        if cantidad <= self.cantidad:
-            self.cantidad -= cantidad
-            return True
-        return False
-
 class Cafetera:
     def __init__(self, cafe, vasos, azucarero):
         self.cafe = cafe
-        self.vasos = vasos
+        self.vasos = vasos  # Atributo de la cafetera
         self.azucarero = azucarero
 
     def servir_cafe(self, tamaño, azucar):
@@ -40,18 +23,10 @@ class Cafetera:
         self.vasos[tamaño] -= 1
         
         return "Café servido correctamente."
-    class Cafetera:
-    def __init__(self):
-        self.cafe = 0  # Asumiendo que tienes este atributo
-        self.leche = 0
-        self.azucar = 0
-        self.vasos = {'pequeño': 0, 'grande': 0}  # Asumiendo estructura de vasos
 
-  return "Café servido correctamente."
-   def rellenar_recursos(self, cafe, azucar, vasos):
-    self.cafe += cafe
-    self.azucarero.cantidad += azucar
-    for tamaño, cantidad in vasos.items():
-        if tamaño in self.vasos:
-            self.vasos[tamaño] += cantidad
-
+    def rellenar_recursos(self, cafe, azucar, vasos):
+        self.cafe += cafe
+        self.azucarero.cantidad += azucar
+        for tamaño, cantidad in vasos.items():
+            if tamaño in self.vasos:  # Usa el atributo de la cafetera
+                self.vasos[tamaño] += cantidad
