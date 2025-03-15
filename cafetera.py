@@ -40,10 +40,16 @@ class Cafetera:
         self.vasos[tamaño] -= 1
         
         return "Café servido correctamente."
-    
-def rellenar_recursos(self, cafe, azucar, vasos):
-    self.cafe += cafe
-    self.azucarero.cantidad += azucar
-    for tamaño, cantidad in vasos.items():
-        if tamaño in self.vasos:
-            self.vasos[tamaño] += cantidad
+    class Cafetera:
+    def __init__(self):
+        self.cafe = 0  # Asumiendo que tienes este atributo
+        self.leche = 0
+        self.azucar = 0
+        self.vasos = {'pequeño': 0, 'grande': 0}  # Asumiendo estructura de vasos
+
+    def rellenar_recursos(self, cafe, leche, azucar, vasos):
+        """Rellena los recursos de la cafetera."""
+        self.cafe += cafe
+        self.leche += leche
+        self.azucar += azucar
+        self.vasos = vasos  # Actualiza los vasos disponibles
